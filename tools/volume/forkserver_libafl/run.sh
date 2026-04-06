@@ -22,6 +22,8 @@ case "$TARGET" in
     jq)        TARGET_BINARY="/root/projects/targets/jq" ;;
     pdftotext) TARGET_BINARY="/root/projects/targets/pdftotext" ;;
     sqlite3)   TARGET_BINARY="/root/projects/targets/sqlite3" ;;
+    libpng_read_fuzzer) TARGET_BINARY="/root/projects/targets/libpng_read_fuzzer" ;;
+    wav2swf)   TARGET_BINARY="/root/projects/targets/wav2swf" ;;
     *)         echo "forkserver_libafl: Unknown target: $TARGET"; exit 1 ;;
 esac
 
