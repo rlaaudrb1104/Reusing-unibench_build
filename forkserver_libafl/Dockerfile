@@ -156,8 +156,7 @@ COPY target/libpng /unibench/libpng
 # Build libpng_read_fuzzer with coverage instrumentation
 RUN cd /unibench/libpng && \
     chmod +x build_for_coverage.sh && \
-    ./build_for_coverage.sh && \
-    cp /d/p/cov/libpng_read_fuzzer /root/projects/targets/
+    ./build_for_libafl.sh 
 
 # flvmeta-1.2.1 compile
 RUN cd $TARGET_DIR/flvmeta-1.2.1 && \

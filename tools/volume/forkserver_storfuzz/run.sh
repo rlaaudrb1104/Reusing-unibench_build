@@ -51,10 +51,13 @@ echo "[forkserver_storfuzz] Seeds:   $SEED_DIR"
 echo "[forkserver_storfuzz] Output:  $OUTPUT_DIR"
 echo "[forkserver_storfuzz] Args:    ${TARGET_ARGS[*]}"
 
+ulimit -c 0
+
 exec "$FUZZER" \
     -t 5000 \
     -o "$OUTPUT_DIR" \
     $FUZZARGS \
+    -- \
     "$TARGET_BINARY" \
     "$SEED_DIR" \
     "${TARGET_ARGS[@]}"

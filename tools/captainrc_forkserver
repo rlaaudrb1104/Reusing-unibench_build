@@ -5,11 +5,11 @@ WORKDIR=../_result
 REPEAT=1
 WORKER_POOL="90 91 92 93 94 95 96 97"
 # TIMEOUT=5m
-# exiv2    imginfo  jq mp3gain  pdftotext  ||   libpng_read_fuzzer  flvmeta    wav2swf 
+# exiv2    imginfo  jq mp3gain  pdftotext  wav2swf flvmeta || libpng_read_fuzzer
 FUZZERS=(forkserver_libafl)
 
 # forkserver_storfuzz_TARGETS=(jq exiv2 sqlite3)
-forkserver_libafl_TARGETS=(exiv2 imginfo jq mp3gain pdftotext libpng_read_fuzzer flvmeta wav2swf)
+forkserver_libafl_TARGETS=(exiv2 imginfo jq mp3gain pdftotext flvmeta wav2swf libpng_read_fuzzer)
 
 exiv2_SEED="/home/myeonggyu/Reusing-unibench_build/tools/volume/seeds/general_evaluation/jpg"
 imginfo_SEED="/home/myeonggyu/Reusing-unibench_build/tools/volume/seeds/general_evaluation/imginfo"
