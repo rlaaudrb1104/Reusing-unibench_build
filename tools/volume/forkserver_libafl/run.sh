@@ -54,7 +54,7 @@ echo "[forkserver_libafl] Args:    ${TARGET_ARGS[*]}"
 ulimit -c 0
 
 exec "$FUZZER" \
-    -t 5000 \
+    -t 1 \
     -o "$OUTPUT_DIR" \
     $FUZZARGS \
     -- \

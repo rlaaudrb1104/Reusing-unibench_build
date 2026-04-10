@@ -241,5 +241,5 @@ while true; do
     fi
 
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Waiting 30 minutes until next measurement..."
-    sleep 180  # 30 minutes
+    sleep 1800  # 30 minutes
 done
